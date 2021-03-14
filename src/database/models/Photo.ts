@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-interface PhotoInterface extends mongoose.Document {
+export interface PhotoInterface extends mongoose.Document {
     name: string;
     size: number;
     key: string;

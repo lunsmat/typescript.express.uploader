@@ -1,4 +1,6 @@
 import request from 'supertest';
+import mongoose from 'mongoose';
+
 import { app } from '@app';
 
 describe('Ping Test', () => {
@@ -14,5 +16,8 @@ describe('Ping Test', () => {
         expect(response.body).toMatchObject({ pong: true });
     });
 
+    afterAll(async () => {
+        await mongoose.disconnect();
+    });
 });
 
