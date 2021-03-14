@@ -100,7 +100,7 @@ This project it's in development mode, go to features section to know what featu
   - [x] Configure Cors
   - [x] Configure DotEnv
   - [x] Configure and connect to database
-    - [ ] Make Photos model
+    - [x] Make Photos model
   - [ ] Make tests (Using TDD)
   - [ ] Configure multer to store photos in local ambient
     - [ ] Get all photos
