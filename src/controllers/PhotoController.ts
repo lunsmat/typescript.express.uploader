@@ -7,6 +7,19 @@ class PhotoController {
 
         return response.json(photos);
     }
+
+    async create(request: Request, response: Response): Promise<Response> {
+        const { key } = request.body;
+        const { originalname: name, size } = request.file;
+
+        const photo = await Photo.create({
+            name,
+            size,
+            key,
+        });
+
+        return response.status(201).json(photo);
+    }
 }
 
 export { PhotoController };

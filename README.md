@@ -104,7 +104,7 @@ This project it's in development mode, go to features section to know what featu
   - [x] Make tests (Using TDD)
   - [x] Configure multer to store photos in local ambient
     - [x] Get all photos
-    - [ ] Upload a photo
+    - [x] Upload a photo
     - [ ] Delete a photo
   - [ ] Configure multer to use S2 to store the photos
   - [ ] v1.0.0 of the project finished, deploy.
