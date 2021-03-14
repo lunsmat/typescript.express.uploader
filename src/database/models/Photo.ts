@@ -1,4 +1,7 @@
 import mongoose from 'mongoose';
+import path from 'path';
+import fs from 'fs';
+import { promisify } from 'util';
 
 export interface PhotoInterface extends mongoose.Document {
     name: string;
@@ -8,7 +11,7 @@ export interface PhotoInterface extends mongoose.Document {
     createdAt: Date;
 }
 
-const photoSchema = new mongoose.Schema({
+const PhotoSchema = new mongoose.Schema<PhotoInterface>({
     name: String,
     size: Number,
     key: String,
@@ -19,6 +22,16 @@ const photoSchema = new mongoose.Schema({
     },
 });
 
-const Photo = mongoose.model<PhotoInterface>('Photo', photoSchema);
+PhotoSchema.pre('remove', function() {
+    switch (process.env.STORAGE_TYPE) {
+
+    case 'local':
+        return promisify(fs.unlink)(
+            path.resolve(__dirname, '..',   '..', 'tmp', 'uploads', this.key)
+        );
+    }
+});
+
+const Photo = mongoose.model<PhotoInterface>('Photo', PhotoSchema);
 
 export { Photo };

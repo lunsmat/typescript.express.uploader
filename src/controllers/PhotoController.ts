@@ -37,7 +37,10 @@ class PhotoController {
         const { id } = request.params;
 
         try {
-            await Photo.findByIdAndDelete(id);
+            const photo = await Photo.findById(id);
+
+            if (photo)
+                await photo.remove();
         } catch { null; }
 
         return response.json({
