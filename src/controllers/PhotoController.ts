@@ -6,7 +6,8 @@ class PhotoController {
         const photos = await Photo.find();
 
         for (const i in photos) {
-            photos[i].url = `${request.headers.host}/uploads/${photos[i].key}`;
+            if (photos[i].storageType === 'local')
+                photos[i].url = `${request.headers.host}/${photos[i].url}`;
         }
 
         return response.json(photos);
@@ -18,17 +19,22 @@ class PhotoController {
                 .status(400)
                 .json({ error: 'No Photo was send!' });
 
-        const { key } = request.body;
-        const { originalname: name, size } = request.file;
+        const { url, key } = request.body;
+        const { originalname: name, size, location = '' }
+            = request.file as Express.MulterS3.File;
+
+        const storageType = process.env.STORAGE_TYPE;
 
         const photo = await Photo.create({
             name,
             size,
             key,
+            storageType,
+            url: storageType === 'S3' ? location : url
         });
 
-
-        photo.url = `${request.headers.host}/uploads/${photo.key}`;
+        if (storageType === 'local')
+            photo.url = `${request.headers.host}/${photo.url}`;
 
         return response.status(201).json(photo);
     }

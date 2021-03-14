@@ -29,6 +29,8 @@ This is an application to upload photos,
 - <img src=".github/technologies/jest.svg" alt="Jest" height="18" /> &nbsp; Jest v26.6.3
 - <img src=".github/technologies/babel.svg" alt="Babel" height="18" /> &nbsp; Babel v7.13.10
 - <img src=".github/technologies/mongodb.svg" alt="Babel" height="18" /> &nbsp; Mongoose v5.11.15
+- <img src=".github/technologies/aws.svg" alt="Babel" height="18" /> &nbsp; AWS
+  - <img src=".github/technologies/s3.svg" alt="Babel" height="18" /> &nbsp; S3
 
 
 ## ⚙ Installation
@@ -61,6 +63,9 @@ $ cd typescript.express.uploader
 $ yarn
 
 # Copy and paste the file .env.example to a file called .env and fill in the file with the necessaries variables
+
+# For test all the app you can run
+$ yarn test
 
 # Start the server in development mode, if you doesn't have yarn you can use `npm run dev`
 $ yarn dev
@@ -106,7 +111,7 @@ This project it's in development mode, go to features section to know what featu
     - [x] Get all photos
     - [x] Upload a photo
     - [x] Delete a photo
-  - [ ] Configure multer to use S3 to store the photos
+  - [x] Configure multer to use S3 to store the photos
   - [ ] v1.0.0 of the project finished, deploy.
 
 
