@@ -103,7 +103,7 @@ This project it's in development mode, go to features section to know what featu
     - [x] Make Photos model
   - [x] Make tests (Using TDD)
   - [x] Configure multer to store photos in local ambient
-    - [ ] Get all photos
+    - [x] Get all photos
     - [ ] Upload a photo
     - [ ] Delete a photo
   - [ ] Configure multer to use S2 to store the photos
