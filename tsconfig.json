@@ -25,5 +25,5 @@
             "@app": ["./src/app.ts"]
         }
     },
-    "exclude": ["jest.config.ts"]
+    "exclude": ["jest.config.ts", "babel.config.js", "dist"]
 }

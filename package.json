@@ -1,6 +1,6 @@
 {
   "name": "uploader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An app to uploads photos, this is the backend",
   "main": "src/server.ts",
   "repository": "https://github.com/Luan-Farias/typescript.express.uploader.git",
@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "node dist/server.js",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "test": "jest"
   },
@@ -15,11 +17,16 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.20",
     "@types/supertest": "^2.0.10",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.22.0",
     "jest": "^26.6.3",
     "supertest": "^6.1.3",
