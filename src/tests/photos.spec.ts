@@ -1,15 +1,18 @@
 import request from 'supertest';
-import faker from 'faker';
 import mongoose from 'mongoose';
+import path from 'path';
 
 import { app } from '@app';
 import { PhotoInterface } from '@database/models/Photo';
 
 describe('Photos tests', () => {
+    const imagePath = path.resolve(__dirname, '..', 'tmp', 'uploads', 'test.jpg');
+    const insertedIds: string[] = [];
+
     it('Should be able to upload one photo', async () => {
         const response = await request(app)
             .post('/api/photos')
-            .attach('image', faker.image.image());
+            .attach('image', imagePath);
 
         expect(response.status).toBe(201);
 
@@ -17,6 +20,8 @@ describe('Photos tests', () => {
         expect(response.body).toHaveProperty('name');
         expect(response.body).toHaveProperty('size');
         expect(response.body).toHaveProperty('key');
+
+        insertedIds.push(response.body._id);
     });
 
     it('Should not be able to send request without photo', async () => {
@@ -25,13 +30,12 @@ describe('Photos tests', () => {
 
         expect(response.status).toBe(400);
 
-        expect(response.body).toMatchObject({ error: 'No Photo was send' });
+        expect(response.body).toMatchObject({ error: 'No Photo was send!' });
     });
 
     it('Should be able to get all photos', async () => {
         const response = await request(app)
-            .post('/api/photos')
-            .attach('image', faker.image.image());
+            .get('/api/photos');
 
         const body = response.body;
 
@@ -47,17 +51,13 @@ describe('Photos tests', () => {
     });
 
     it('Should be able to delete a photo', async () => {
-        const responsePost = await request(app)
-            .post('/api/photos')
-            .attach('image', faker.image.image());
+        for (const i in insertedIds) {
+            const response = await request(app)
+                .delete(`/api/photos/${insertedIds[i]}`);
 
-        const { _id } = responsePost.body;
-
-        const response = await request(app)
-            .delete(`/api/photos/${_id}`);
-
-        expect(response.status).toBe(200);
-        expect(response.body.message).toBe('Photo deleted successfully');
+            expect(response.status).toBe(200);
+            expect(response.body.message).toBe('Photo deleted successfully');
+        }
     });
 
     afterAll(async () => {

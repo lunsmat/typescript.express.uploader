@@ -8,3 +8,4 @@
 
 /src/tmp/uploads/**/*
 !/src/tmp/uploads/.gitkeep
+!/src/tmp/uploads/test.jpg
