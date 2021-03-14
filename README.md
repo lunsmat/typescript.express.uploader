@@ -28,6 +28,7 @@ This is an application to upload photos,
 - <img src=".github/technologies/eslint.svg" alt="ESLint" height="18" /> &nbsp; ESLint v7.22.0
 - <img src=".github/technologies/jest.svg" alt="Jest" height="18" /> &nbsp; Jest v26.6.3
 - <img src=".github/technologies/babel.svg" alt="Babel" height="18" /> &nbsp; Babel v7.13.10
+- <img src=".github/technologies/mongodb.svg" alt="Babel" height="18" /> &nbsp; Mongoose v5.11.15
 
 
 ## ⚙ Installation
@@ -40,6 +41,7 @@ The requirements to install this app are:
 
 - <img src=".github/technologies/git.svg" alt="Git" height="18" /> &nbsp; [Git](https://git-scm.com)
 - <img src=".github/technologies/nodejs.svg" alt="Node" height="18" /> &nbsp; [NodeJS](https://nodejs.org/en/)
+- <img src=".github/technologies/mongodb.svg" alt="Babel" height="18" /> &nbsp; [Mongo](https://www.mongodb.com/3)
 - <img src=".github/technologies/yarn.svg" alt="Node" height="18" /> &nbsp; [Yarn](https://yarnpkg.com/)
 - <img src=".github/technologies/insomnia.svg" alt="Node" height="18" /> &nbsp; [Insomnia](https://insomnia.rest) (To test the API)
 - <img src=".github/technologies/vscode.svg" alt="ESLint" height="18" /> &nbsp; [Visual Studio Code](https://code.visualstudio.com) (Optional to have a good code editor)
@@ -57,6 +59,8 @@ $ cd typescript.express.uploader
 
 # Install dependencies, if you doesn't have yarn you can use `npm install`
 $ yarn
+
+# Copy and paste the file .env.example to a file called .env and fill in the file with the necessaries variables
 
 # Start the server in development mode, if you doesn't have yarn you can use `npm run dev`
 $ yarn dev
@@ -92,10 +96,10 @@ This project it's in development mode, go to features section to know what featu
   - [x] Add and configure Jest
     - [x] Make first test
   - [x] Add and configure Babel
-- [ ] Start Development
-  - [ ] Configure Cors
-  - [ ] Configure DotEnv
-  - [ ] Configure and connect to database
+- [x] Start Development
+  - [x] Configure Cors
+  - [x] Configure DotEnv
+  - [x] Configure and connect to database
     - [ ] Make Photos model
   - [ ] Make tests (Using TDD)
   - [ ] Configure multer to store photos in local ambient
