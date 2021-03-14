@@ -42,6 +42,7 @@ describe('Photos tests', () => {
             expect(photo).toHaveProperty('name');
             expect(photo).toHaveProperty('size');
             expect(photo).toHaveProperty('key');
+            expect(photo).toHaveProperty('url');
         });
     });
 

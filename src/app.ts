@@ -2,6 +2,7 @@ import 'dotenv/config';
 import '@database/connection';
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 
 import { routesAPI } from '@routes/api';
 
@@ -26,6 +27,8 @@ class Application {
     }
 
     private routes() {
+        this.express
+            .use('/uploads', express.static(path.resolve(__dirname, 'tmp', 'uploads')));
         this.express.use('/api', routesAPI);
     }
 }
