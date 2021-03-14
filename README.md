@@ -24,18 +24,21 @@ This is an application to upload photos,
 
 - <img src=".github/technologies/nodejs.svg" alt="Node" height="18" /> &nbsp; NodeJS v14.16.0
 - <img src=".github/technologies/express.svg" alt="EX" height="18" /> &nbsp; Express v4.17.1
+- <img src=".github/technologies/typescript.svg" alt="TS" height="18" /> &nbsp; TypeScript v4.2.3
 
 
 ## ⚙ Installation
+
+If you want to run locally in your machine, you can do the following steps.
 
 ### Requirements
 
 The requirements to install this app are:
 
-- [Git](https://git-scm.com)
-- [NodeJS](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/)
-- [Insomnia](https://insomnia.rest) (To test the API)
+- <img src=".github/technologies/git.svg" alt="Git" height="18" /> &nbsp; [Git](https://git-scm.com)
+- <img src=".github/technologies/nodejs.svg" alt="Node" height="18" /> &nbsp; [NodeJS](https://nodejs.org/en/)
+- <img src=".github/technologies/yarn.svg" alt="Node" height="18" /> &nbsp; [Yarn](https://yarnpkg.com/)
+- <img src=".github/technologies/insomnia.svg" alt="Node" height="18" /> &nbsp; [Insomnia](https://insomnia.rest) (To test the API)
 - [Visual Studio Code](https://code.visualstudio.com) (Optional to have a good code editor)
 
 ### How to install and run
@@ -52,8 +55,8 @@ $ cd typescript.express.uploader
 # Install dependencies, if you doesn't have yarn you can use `npm install`
 $ yarn
 
-# Start the server if you doesn't have yarn you can use `npm run start`
-$ yarn start
+# Start the server in development mode, if you doesn't have yarn you can use `npm run dev`
+$ yarn dev
 
 # With this you have started the project server
 
@@ -68,18 +71,19 @@ To test you have to do:
 - Open the APP insomnia
 - Go to Application > Preferences > Data > Import Data > From File > Select the Insomnia File.
 - With this you can have access to insomnia workspace that I was using in this app, so test some routes
+  - It's better if you go to tests and run all tests in order, if no one test fail, so all the application it's working
 
 
 ## 📊 Project Status
 
-This project is starting now, so it's in development mode.
+This project it's in development mode, go to features section to know what features of the project are being developed.
 
 
 ## ✔ Features
 
 - [x] Make a Express Application
 - [ ] Configure Development Mode
-  - [ ] Add Typescript
+  - [x] Add Typescript
   - [ ] Configure project folder
   - [ ] Add and configure ESLint
   - [ ] Add and configure Jest

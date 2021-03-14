@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express'
 
-class App {
-    express;
+class Application {
+    express: express.Application;
 
     constructor() {
         this.express = express();
@@ -11,15 +11,15 @@ class App {
         this.routes();
     }
 
-    variables() {
+    private variables() {
         this.express.set('port', 3333);
     }
 
-    handlers() {
+    private handlers() {
         this.express.use(express.json());
     }
 
-    routes() {
+    private routes() {
         this.express.get('/api/ping',
             (request, response) => response.json({
                 pong: true,
@@ -28,4 +28,6 @@ class App {
     }
 }
 
-module.exports = new App().express;
+const app = new Application().express;
+
+export { app };
