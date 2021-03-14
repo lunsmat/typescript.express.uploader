@@ -16,7 +16,8 @@ module.exports = {
                 '@controllers': './src/controllers',
                 '@routes': './src/routes',
                 '@app': './src/app.js',
-                '@database/*': './src/database/*',
+                '@database': './src/database',
+                '@config': './src/config',
             }
         }]
     ],

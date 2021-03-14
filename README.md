@@ -101,8 +101,8 @@ This project it's in development mode, go to features section to know what featu
   - [x] Configure DotEnv
   - [x] Configure and connect to database
     - [x] Make Photos model
-  - [ ] Make tests (Using TDD)
-  - [ ] Configure multer to store photos in local ambient
+  - [x] Make tests (Using TDD)
+  - [x] Configure multer to store photos in local ambient
     - [ ] Get all photos
     - [ ] Upload a photo
     - [ ] Delete a photo

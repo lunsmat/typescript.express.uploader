@@ -21,6 +21,7 @@
         "baseUrl": ".",
         "paths": {
             "@controllers/*": ["./src/controllers/*"],
+            "@config/*": ["./src/config/*"],
             "@database/*": ["./src/database/*"],
             "@routes/*": ["./src/routes/*"],
             "@app": ["./src/app.ts"]
