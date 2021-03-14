@@ -1,6 +1,6 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import { PingController } from "../controllers/PingController";
+import { PingController } from '@controllers/PingController';
 
 const routesAPI = Router();
 

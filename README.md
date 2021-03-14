@@ -25,6 +25,7 @@ This is an application to upload photos,
 - <img src=".github/technologies/nodejs.svg" alt="Node" height="18" /> &nbsp; NodeJS v14.16.0
 - <img src=".github/technologies/express.svg" alt="EX" height="18" /> &nbsp; Express v4.17.1
 - <img src=".github/technologies/typescript.svg" alt="TS" height="18" /> &nbsp; TypeScript v4.2.3
+- <img src=".github/technologies/eslint.svg" alt="ESLint" height="18" /> &nbsp; ESLint v7.22.0
 
 
 ## ⚙ Installation
@@ -39,7 +40,7 @@ The requirements to install this app are:
 - <img src=".github/technologies/nodejs.svg" alt="Node" height="18" /> &nbsp; [NodeJS](https://nodejs.org/en/)
 - <img src=".github/technologies/yarn.svg" alt="Node" height="18" /> &nbsp; [Yarn](https://yarnpkg.com/)
 - <img src=".github/technologies/insomnia.svg" alt="Node" height="18" /> &nbsp; [Insomnia](https://insomnia.rest) (To test the API)
-- [Visual Studio Code](https://code.visualstudio.com) (Optional to have a good code editor)
+- <img src=".github/technologies/vscode.svg" alt="ESLint" height="18" /> &nbsp; [Visual Studio Code](https://code.visualstudio.com) (Optional to have a good code editor)
 
 ### How to install and run
 
@@ -84,8 +85,8 @@ This project it's in development mode, go to features section to know what featu
 - [x] Make a Express Application
 - [ ] Configure Development Mode
   - [x] Add Typescript
-  - [ ] Configure project folder
-  - [ ] Add and configure ESLint
+  - [x] Configure project folder
+  - [x] Add and configure ESLint
   - [ ] Add and configure Jest
     - [ ] Make first test
   - [ ] Add and configure Babel

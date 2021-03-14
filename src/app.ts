@@ -1,6 +1,6 @@
-import express from 'express'
+import express from 'express';
 
-import { routesAPI } from './routes/api';
+import { routesAPI } from '@routes/api';
 
 class Application {
     express: express.Application;
