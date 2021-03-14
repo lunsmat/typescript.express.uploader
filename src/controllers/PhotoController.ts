@@ -27,7 +27,22 @@ class PhotoController {
             key,
         });
 
+
+        photo.url = `${request.headers.host}/uploads/${photo.key}`;
+
         return response.status(201).json(photo);
+    }
+
+    async delete(request: Request, response: Response): Promise<Response> {
+        const { id } = request.params;
+
+        try {
+            await Photo.findByIdAndDelete(id);
+        } catch { null; }
+
+        return response.json({
+            message: 'Photo deleted successfully',
+        });
     }
 }
 

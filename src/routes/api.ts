@@ -16,5 +16,6 @@ routesAPI.get('/ping', pingController.index);
 
 routesAPI.get('/photos', photoController.index);
 routesAPI.post('/photos', upload.single('image'), photoController.create);
+routesAPI.delete('/photos/:id', photoController.delete);
 
 export { routesAPI };

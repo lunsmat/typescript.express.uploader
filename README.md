@@ -105,8 +105,8 @@ This project it's in development mode, go to features section to know what featu
   - [x] Configure multer to store photos in local ambient
     - [x] Get all photos
     - [x] Upload a photo
-    - [ ] Delete a photo
-  - [ ] Configure multer to use S2 to store the photos
+    - [x] Delete a photo
+  - [ ] Configure multer to use S3 to store the photos
   - [ ] v1.0.0 of the project finished, deploy.
 
 
