@@ -21,7 +21,9 @@
         "baseUrl": ".",
         "paths": {
             "@controllers/*": ["./src/controllers/*"],
-            "@routes/*": ["./src/routes/*"]
+            "@routes/*": ["./src/routes/*"],
+            "@app": ["./src/app.ts"]
         }
-    }
+    },
+    "exclude": ["jest.config.ts"]
 }

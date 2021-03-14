@@ -26,6 +26,7 @@ This is an application to upload photos,
 - <img src=".github/technologies/express.svg" alt="EX" height="18" /> &nbsp; Express v4.17.1
 - <img src=".github/technologies/typescript.svg" alt="TS" height="18" /> &nbsp; TypeScript v4.2.3
 - <img src=".github/technologies/eslint.svg" alt="ESLint" height="18" /> &nbsp; ESLint v7.22.0
+- <img src=".github/technologies/jest.svg" alt="Jest" height="18" /> &nbsp; Jest v26.6.3
 
 
 ## ⚙ Installation
@@ -87,8 +88,8 @@ This project it's in development mode, go to features section to know what featu
   - [x] Add Typescript
   - [x] Configure project folder
   - [x] Add and configure ESLint
-  - [ ] Add and configure Jest
-    - [ ] Make first test
+  - [x] Add and configure Jest
+    - [x] Make first test
   - [ ] Add and configure Babel
 - [ ] Start Development
   - [ ] Configure Cors
