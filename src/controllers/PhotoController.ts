@@ -13,6 +13,11 @@ class PhotoController {
     }
 
     async create(request: Request, response: Response): Promise<Response> {
+        if (!request.file)
+            return response
+                .status(400)
+                .json({ error: 'No Photo was send!' });
+
         const { key } = request.body;
         const { originalname: name, size } = request.file;
 

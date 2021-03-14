@@ -18,6 +18,7 @@ module.exports = {
                 '@app': './src/app.js',
                 '@database': './src/database',
                 '@config': './src/config',
+                '@middlewares': './src/middlewares',
             }
         }]
     ],

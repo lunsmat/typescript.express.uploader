@@ -25,7 +25,7 @@ describe('Photos tests', () => {
 
         expect(response.status).toBe(400);
 
-        expect(response.body).toMatchObject({ error: 'No file was send' });
+        expect(response.body).toMatchObject({ error: 'No Photo was send' });
     });
 
     it('Should be able to get all photos', async () => {
