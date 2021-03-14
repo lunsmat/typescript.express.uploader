@@ -1,0 +1,16 @@
+{
+  "name": "uploader",
+  "version": "0.1.0",
+  "description": "An app to uploads photos, this is the backend",
+  "main": "src/server.js",
+  "repository": "https://github.com/Luan-Farias/typescript.express.uploader.git",
+  "author": "Luan Farias <luan.farias_bvs@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
