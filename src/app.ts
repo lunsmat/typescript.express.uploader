@@ -1,5 +1,7 @@
 import express from 'express'
 
+import { routesAPI } from './routes/api';
+
 class Application {
     express: express.Application;
 
@@ -20,11 +22,7 @@ class Application {
     }
 
     private routes() {
-        this.express.get('/api/ping',
-            (request, response) => response.json({
-                pong: true,
-            })
-        );
+        this.express.use('/api', routesAPI);
     }
 }
 
