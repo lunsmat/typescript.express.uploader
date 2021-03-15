@@ -6,7 +6,7 @@ import aws from 'aws-sdk';
 import multerS3 from 'multer-s3';
 
 const storageTypes = {
-    local: multer.diskStorage({
+    local: () => multer.diskStorage({
         destination: (req, file, callback) => {
             callback(null, path.resolve(__dirname, '..', 'tmp', 'uploads'));
         },
@@ -23,7 +23,7 @@ const storageTypes = {
             });
         }
     }),
-    S3: multerS3({
+    S3: () => multerS3({
         s3: new aws.S3(),
         bucket: process.env.BUCKET_NAME,
         contentType: multerS3.AUTO_CONTENT_TYPE,
@@ -43,7 +43,7 @@ const storageTypes = {
 
 const multerConfig: multer.Options = {
     dest: path.resolve(__dirname, '..', 'tmp', 'uploads'),
-    storage: storageTypes[process.env.STORAGE_TYPE],
+    storage: storageTypes[process.env.STORAGE_TYPE](),
     limits: {
         fileSize: 2 * 1024 * 1024,
     },

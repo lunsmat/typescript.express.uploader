@@ -4,8 +4,6 @@ import fs from 'fs';
 import { promisify } from 'util';
 import aws from 'aws-sdk';
 
-const S3 = new aws.S3();
-
 export interface PhotoInterface extends mongoose.Document {
     name: string;
     size: number;
@@ -35,12 +33,14 @@ PhotoSchema.pre('remove', function() {
             path.resolve(__dirname, '..',   '..', 'tmp', 'uploads', this.key)
         );
 
-    case 'S3':
+    case 'S3': {
+        const S3 = new aws.S3();
         return S3
             .deleteObject({
                 Bucket: process.env.BUCKET_NAME,
                 Key: this.key
             }).promise();
+    }
     }
 });
 

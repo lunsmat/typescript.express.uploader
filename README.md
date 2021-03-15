@@ -67,6 +67,8 @@ $ yarn
 # For test all the app you can run
 $ yarn test
 
+# OBS: The test will use local storage, so if you want to run with aws and change the app have certain that you know what you doing
+
 # Start the server in development mode, if you doesn't have yarn you can use `npm run dev`
 $ yarn dev
 
