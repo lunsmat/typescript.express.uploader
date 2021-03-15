@@ -114,7 +114,13 @@ This project it's in development mode, go to features section to know what featu
     - [x] Upload a photo
     - [x] Delete a photo
   - [x] Configure multer to use S3 to store the photos
-  - [ ] v1.0.0 of the project finished, deploy.
+  - [x] v1.0.0 of the project finished, deploy. 🎉🎉🎉
+    - [x] This is deployed in heroku:
+      - [x] The url is: <https://uploader-luan-farias.herokuapp.com>
+      - [x] Has no / route to be access
+      - [x] To you test the url you can go in ping route:
+        - [x] <https://uploader-luan-farias.herokuapp.com/api/ping>
+
 
 
 ## 🎉 Contribution

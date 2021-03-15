@@ -1,6 +1,6 @@
 {
   "name": "uploader",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "description": "An app to uploads photos, this is the backend",
   "main": "src/server.ts",
   "repository": "https://github.com/Luan-Farias/typescript.express.uploader.git",
