@@ -7,7 +7,7 @@ class PhotoController {
 
         for (const i in photos) {
             if (photos[i].storageType === 'local')
-                photos[i].url = `${request.headers.host}/${photos[i].url}`;
+                photos[i].url = `https://${request.headers.host}/${photos[i].url}`;
         }
 
         return response.json(photos);
